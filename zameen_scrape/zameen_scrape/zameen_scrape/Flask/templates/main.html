@@ -1,0 +1,27 @@
+
+    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel= "stylesheet" >
+</head>
+<body>
+<h2>Search by:</h2>
+
+<form action="/search_results" method=post>
+    <input type=text name=search  placeholder="search" value="{{ request.form.search}}"></br></br>
+    <div class="advanced">
+
+               <select name="search_db" id="search_db">
+                   <option value= ""> -- All -- </option>
+                   <option value="name">Name</option>
+                   <option value="id">ID</option>
+                   <option value="email">Email</option>
+                   <option value="city">City</option>
+               </select>
+           </div>
+    <input type = "submit" />
+</form>
+
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
